@@ -3,11 +3,13 @@ import BackToTopButton from './components/BackToTopButton';
 import HeroAndOverview from './components/HeroAndOverview';
 import { ImageZoomModal, PdfReferenceModal } from './components/MediaModal';
 import Navbar from './components/Navbar';
+import ProjectMapSection from './components/ProjectMapSection';
 import SectionClosingFooter from './components/SectionClosingFooter';
 import SectionDramaga from './components/SectionDramaga';
 import SectionGranada from './components/SectionGranada';
 import SectionJatinangor from './components/SectionJatinangor';
 import SectionMemorial from './components/SectionMemorial';
+import WhatsAppButton from './components/WhatsAppButton';
 
 export default function App() {
   const [pdfPage, setPdfPage] = useState<number | null>(null);
@@ -25,6 +27,10 @@ export default function App() {
       <main className="pt-16">
         <HeroAndOverview
           onOpenPdfPage={setPdfPage}
+          onZoomImage={(src, alt) => setZoomedImage({ src, alt })}
+        />
+
+        <ProjectMapSection
           onZoomImage={(src, alt) => setZoomedImage({ src, alt })}
         />
 
@@ -63,6 +69,7 @@ export default function App() {
       <PdfReferenceModal page={pdfPage} onChangePage={setPdfPage} />
 
       <BackToTopButton />
+      <WhatsAppButton />
     </div>
   );
 }

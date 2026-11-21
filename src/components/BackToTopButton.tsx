@@ -38,7 +38,7 @@ export default function BackToTopButton() {
       title="Kembali ke atas"
       tabIndex={visible ? 0 : -1}
       aria-hidden={!visible}
-      className={`fixed bottom-6 right-6 z-30 w-11 h-11 rounded-full bg-[#0F2337] text-white border border-[#C49A3D]/60 shadow-lg flex items-center justify-center hover:bg-[#193858] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C49A3D] cursor-pointer transition-all duration-200 ${
+      className={`fixed bottom-[5.25rem] right-6 z-30 w-11 h-11 rounded-full bg-[#0F2337] text-white border border-[#C49A3D]/60 shadow-lg flex items-center justify-center hover:bg-[#193858] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C49A3D] cursor-pointer transition-all duration-200 ${
         visible
           ? 'opacity-100 translate-y-0 pointer-events-auto'
           : 'opacity-0 translate-y-3 pointer-events-none'
